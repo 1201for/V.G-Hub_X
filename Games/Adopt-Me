@@ -1,1 +1,8 @@
 print("WIP")
+repeat wait() until game:IsLoaded() and VG.FFD(Player.PlayerGui, "PlayButton")
+repeat wait()
+    VG.FireConnection(VG.FFD(Player.PlayerGui, "PlayButton").MouseButton1Click)
+    VG.FireConnection(VG.FFD(Player.PlayerGui, "ChooseParent").MouseButton1Click)
+until VG.FFD(Player.PlayerGui, "NewsApp").Enabled and not VG.FFD(Player.PlayerGui, "ChooseParent").Visible
+
+print("Done Loading")
